@@ -19,17 +19,17 @@ Perform the filtering by referencing the column directly, not passing a SQL stri
 flights.filter(flights.origin == "PDX").groupBy().min("distance").show()
 
 # Find the longest flight from SEA in terms of air time
-flights.filter(flights.origin=="SEA").groupBy().max("distance").show()
+flights.filter(flights.origin=="SEA").groupBy().max("air_time").show()
 
 #output
-+-------------+
+ +-------------+
 |min(distance)|
 +-------------+
 |          106|
 +-------------+
 
 +-------------+
-|max(distance)|
+|max(air_time)|
 +-------------+
-|         2724|
+|          409|
 +-------------+
